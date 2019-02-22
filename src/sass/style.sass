@@ -1,0 +1,202 @@
+$gray: #404549
+$blue: #4285F4
+$borderGray: #dee2e6
+$borderBlue: #C1E4FE
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background-color: #F3F6F9
+
+.container
+  margin: 100px auto
+  max-width: 540px
+  padding: 15px 20px
+  box-sizing: border-box
+  background-color: white
+  border-radius: .25rem
+  border: 1px solid #eee
+  box-shadow: 0 0 35px 0 rgba(154,161,171,.15)
+
+  h1
+    color: $gray
+    text-align: center
+    margin: 10px 0 30px 0
+    text-shadow: 1px 0 0 black
+
+.password
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    input
+      min-width: 200px
+      padding: 6px 15px
+      font-size: .875rem
+      line-height: 1.3
+      border-radius: 0.15em
+      color: #545454
+      background: white
+      border: 1px solid #C1E4FE
+      box-shadow: 0 0 1px 0 rgba(154,161,171,.65)
+
+    button
+       width: 45px
+       height: 45px
+       margin-left: 15px
+       background: white
+       border-radius: .25rem
+       border: 1px solid #C1E4FE
+       background-size: 50%
+       box-shadow: 0 0 1px 0 rgba(154,161,171,.65)
+       &:hover
+         background-color: #C1E4FE
+
+.copy,
+.generate,
+#rangeValueDisplay
+    margin-left: 10px
+    outline: 0
+
+#rangeValueDisplay
+  max-width: 50px
+
+.options-range
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  margin-top: 20px
+
+  input
+    text-align: center
+    border-radius: 2px
+    border: 1px solid #eee
+    font-size: 14px
+    padding: 4px
+
+#range
+  margin-left: 25px
+
+.pass
+  position: relative
+  display: block
+  border-bottom-left-radius: 0.25em
+  border-bottom-right-radius: 0.25em
+
+.pass:after
+  display: block
+  position: absolute
+  content: ''
+  height: 2px
+  bottom: 1px
+  transition: all 1s ease
+  border-bottom-left-radius: 2em
+  border-bottom-right-radius: 2em
+
+.small-width:after
+  width: 50%
+  background-color: red
+
+.part-width:after
+  width: 75%
+  background-color: orange
+
+.full-width:after
+  width: 100%
+  background-color: green
+
+
+#pass
+  font-weight: bold
+  font-size: 26px
+  text-align: center
+
+.options
+  margin-top: 50px
+  padding: 10px
+  border-top: 1px solid #eee
+
+  label,
+  span
+    margin-right: 3px
+    line-height: 30px
+
+.copy img,
+.generate img
+  margin-top: 2px
+  width: 21px
+  height: 21px
+
+.options-checkbox
+  display: flex
+  flex-direction: column
+  margin-top: 10px
+
+  label
+    display: inline-block
+    position: relative
+    padding-left: 28px
+    line-height: 30px
+    cursor: pointer
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 18px
+      height: 18px
+      left: 0
+      top: 4px
+      border: 1px solid $borderGray
+      border-radius: 4px
+
+  input
+    margin-right: 10px
+    position: absolute
+    left: -9999px
+    &:checked+
+       label
+         &:after
+           content: ''
+           display: block
+           position: absolute
+           left: 7px
+           top: 6px
+           width: 5px
+           height: 10px
+           border-right: 2px solid $blue
+           border-bottom: 2px solid $blue
+           transform: rotate(45deg)
+
+@media screen and (max-width: 768px)
+  body
+    background-color: white
+
+  .container
+    margin: 0 auto
+    border: none
+    box-shadow: none
+
+    h1
+      margin: 10px 0 20px 0
+
+  .password
+     display: flex
+     flex-wrap: wrap
+
+  #pass
+    width: 90%
+    margin: 10px auto
+
+  .password-length
+    display: flex
+    flex-direction: column
+    margin-top: 10px
+
+  .options
+    margin-top: 10px
+
+  .pass:after
+    bottom: 11px

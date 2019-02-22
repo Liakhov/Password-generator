@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Password generator</title>
+</head>
+<body>
+    <div class='container'>
+          <h1>Password generator</h1>
+            <div class="password">
+                <div class="pass">
+                    <input id="pass" type="text" disabled>
+                </div>
+                <button class='copy'>
+                    <img src="img/copy.png" alt="copy">
+                </button>
+                <button class='generate'>
+                    <img src="img/update.png" alt="update">
+                </button>
+            </div>
+        <div class="options">
+            <div class="options-range">
+                <span>Длина пароля:</span>
+                <input id='rangeValueDisplay' type="number" min='4' max="16" value="4">
+                <input id='range' type="range" min='4' max="16">
+            </div>
+            <div class="options-checkbox">
+              <input type="checkbox" id="numb" name="numbers">
+                <label for="numb">Numbers</label>
+              <input type="checkbox" id="lowercase" name="smallLetter" checked >
+                <label for="lowercase">Lowercase</label>
+              <input type="checkbox" id="uppercase" name="bigLetter" >
+                <label for="uppercase">Uppercase</label>
+
+              <input type="checkbox" id="symbols" name="symbols">
+                  <label for="symbols">Symbols</label>
+            </div>
+        </div>
+    </div>
+<script src="js/main.min.js"></script>
+</body>
+</html>
